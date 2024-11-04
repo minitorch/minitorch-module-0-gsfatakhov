@@ -6,3 +6,10 @@
 * Docs: https://minitorch.github.io/
 
 * Overview: https://minitorch.github.io/module0/module0/
+
+
+# Results
+
+![img.png](images/img.png)
+![img.png](images/img2.png)
+![img.png](images/img3.png)

@@ -6,6 +6,7 @@ import networkx as nx
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
+import uuid
 
 import minitorch
 
@@ -124,7 +125,7 @@ def render_train_interface(
         df.append({"epoch": epoch, "loss": total_loss, "correct": correct})
         st_epoch_stats.write(pd.DataFrame(reversed(df)))
 
-        st_epoch_image.plotly_chart(plot())
+        st_epoch_image.plotly_chart(plot(), key=str(uuid.uuid4()))
         if hasattr(train, "train"):
             loss_graph = go.Scatter(mode="lines", x=list(range(len(losses))), y=losses)
             fig = go.Figure(loss_graph)
